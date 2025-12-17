@@ -163,6 +163,20 @@ body {
 .cart{
     color: white;
     display: flex;
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
 }
 .cart_quantity_count{
     margin-top: 16px;
@@ -217,6 +231,14 @@ body {
   
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .product-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+    opacity: 0.6;
   }
   @media (max-width: 1200px) {
     .product-card {

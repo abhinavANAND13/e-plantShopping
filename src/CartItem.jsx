@@ -31,6 +31,11 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(removeItem({ name: item.name }));
   };
 
+  const handleCheckoutShopping = (e) => {
+    e.preventDefault();
+    alert('Coming Soon! Checkout functionality will be available shortly.');
+  };
+
   const totalAmount = calculateTotalAmount();
 
   return (
@@ -79,7 +84,12 @@ const CartItem = ({ onContinueShopping }) => {
               >
                 Continue Shopping
               </button>
-              <button className="checkout-btn">Checkout</button>
+              <button 
+                className="checkout-btn"
+                onClick={handleCheckoutShopping}
+              >
+                Checkout
+              </button>
             </div>
           </div>
         </div>
